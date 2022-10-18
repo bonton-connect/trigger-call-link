@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Call To</title>
-    <link rel="stylesheet" href="/trigger-call-link/index.css">
+    <link id="style" rel="stylesheet" href="/trigger-call-link/index.css">
 </head>
 
 <body class="p-8 text-center container mx-auto max-w-2xl">
@@ -45,6 +45,10 @@
         }
 
         renderCall();
+
+        if (window.location.hostname.indexOf('localhost') >= 0) {
+            document.getElementById('style').setAttribute('href', '/index.css');
+        }
     </script>
 </body>
 
