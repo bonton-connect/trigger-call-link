@@ -7,14 +7,6 @@ use this repo. Instead of `tel:` links.
 
 ## Basic Usage
 ```
-http://bonton-connect.github.io/trigger-call-link/?number={phone_number}
-
-// or 
-
-http://bonton-connect.github.io/trigger-call-link/?{phone_number}
-
-// or 
-
 http://bonton-connect.github.io/trigger-call-link/{phone_number}
 ```
 
@@ -26,15 +18,11 @@ browser to: [`http://bonton-connect.github.io/trigger-call-link/+012233445566`](
 If you want the browser to automatically promt for calling, add `autocall` somewhere in the URL.
 
 ```
-http://bonton-connect.github.io/trigger-call-link/?number={phone_number}&autocall=true
-
-// or 
-
-http://bonton-connect.github.io/trigger-call-link/?{phone_number}&autocall
-
-// or 
-
 http://bonton-connect.github.io/trigger-call-link/autocall/{phone_number}
+
+// OR
+
+http://bonton-connect.github.io/trigger-call-link/{phone_number}?autocall
 ```
 
 ## License
