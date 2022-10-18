@@ -4,8 +4,8 @@
     "tailwindcss": "^3.1.8"
   },
   "scripts": {
-    "serve": "http-server ./public -c0",
-    "build": "tailwindcss -i ./input.css -o ./public/index.css",
-    "build:watch": "tailwindcss -i ./input.css -o ./public/index.css --watch"
+    "serve": "http-server ./ -c0",
+    "build": "tailwindcss -i ./input.css -o ./index.css",
+    "build:watch": "tailwindcss -i ./input.css -o ./index.css --watch"
   }
 }
