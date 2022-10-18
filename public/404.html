@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call To</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body class="p-8 text-center">
+    <div id="valid" class="block">
+        <h1 class="uppercase text-gray-500">Number</h1>
+        <a id="number" href="#" class="block text-3xl text-purple-800 font-bold my-4"></a>
+        <a id="button" href="#" class="block text-2xl bg-purple-900 text-white py-5 font-bold my-10">Call Number</a>
+    </div>
+    <div id="invalid" class="hidden text-xl uppercase text-gray-500">
+        No number has been provided in the URL.
+    </div>
+    <script>
+        function numberOnly(string) {
+            return string.replace(/[^\+\d]/ig, '');
+        }
+
+        function renderCall() {
+            var query = window.location.search;
+            var path = window.location.pathname;
+            var number = numberOnly(query) || numberOnly(path) || null;
+
+            if (!number) {
+                document.getElementById('valid').classList.add('hidden');
+                document.getElementById('valid').classList.remove('block');
+
+                document.getElementById('invalid').classList.remove('hidden');
+            } else {
+                document.getElementById('number').innerText = number;
+                document.getElementById('number').setAttribute('href', "tel:" + number)
+                document.getElementById('button').setAttribute('href', "tel:" + number)
+            }
+
+            if ((query + path).indexOf('autocall') >= 0) {
+                window.location.href = 'tel:' + number;
+            }
+        }
+
+        renderCall();
+    </script>
+</body>
+
+</html>
