@@ -7,22 +7,22 @@ use this repo. Instead of `tel:` links.
 
 ## Basic Usage
 ```
-http://omranjamal.github.io/trigger-call-link/{phone_number}
+https://omranjamal.github.io/trigger-call-link/{phone_number}
 ```
 
 If you want to call the number `+012233445566`, send the
-browser to: [`http://omranjamal.github.io/trigger-call-link/+012233445566`](http://omranjamal.github.io/trigger-call-link/+012233445566)
+browser to: [`https://omranjamal.github.io/trigger-call-link/+012233445566`](https://omranjamal.github.io/trigger-call-link/+012233445566)
 
 ## Auto Calling
 
 If you want the browser to automatically promt for calling, add `autocall` somewhere in the URL.
 
 ```
-http://omranjamal.github.io/trigger-call-link/autocall/{phone_number}
+https://omranjamal.github.io/trigger-call-link/autocall/{phone_number}
 
 // OR
 
-http://omranjamal.github.io/trigger-call-link/{phone_number}?autocall
+https://omranjamal.github.io/trigger-call-link/{phone_number}?autocall
 ```
 
 ## License
